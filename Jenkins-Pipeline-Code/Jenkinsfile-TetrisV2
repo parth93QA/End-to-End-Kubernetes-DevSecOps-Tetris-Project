@@ -97,7 +97,7 @@ pipeline {
             }
             steps {
                 dir('Manifest-file') {
-                    withCredentials([string(credentialsId: 'GITHUB', variable: 'GITHUB_TOKEN')]) {
+                    withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                         sh '''
                             git config user.email "parth93QA"
                             git config user.name "parth93QA"
